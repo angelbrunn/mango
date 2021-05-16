@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+        <base href="<%= htmlWebpackPlugin.options.base_path %>" />
+
+        <link
+            id="folderAsset"
+            rel="icon"
+            type="image/icon"
+            href="<%= htmlWebpackPlugin.options.base_path_asset %>assets/favicon.ico"
+        />
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+</html>

@@ -1,10 +1,10 @@
 {
     "name": "mango",
     "version": "0.0.1",
-    "description": " ",
+    "description": "Exam mango Angel.G.Prado Brun",
     "repository": {
-        "type": "mango",
-        "url": "mango"
+        "type": "git",
+        "url": "https://github.com/angelbrunn/mango"
     },
     "license": "ISC",
     "scripts": {
