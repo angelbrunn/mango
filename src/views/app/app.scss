@@ -1,3 +1,10 @@
 @import './src/views/header/header';
-@import './src/views/home/home';
+@import '../fixed/fixed';
+@import '../normal/normal';
 @import '../../components/range/range';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

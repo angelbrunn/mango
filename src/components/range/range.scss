@@ -2,39 +2,33 @@
     display: flex;
     justify-content: center;
     line-height: 0.5;
+    margin-top: 5%;
     .minValue {
         display: flex;
-        margin: 0px 5px;
+        margin: 5px 5px;
         .amount {
-            margin: 0px 5px;
+            margin: 5px 0px;
         }
     }
     .maxValue {
         display: flex;
-        margin: 0px 5px;
+        margin: 5px 5px;
         .amount {
-            margin: 0px 5px;
+            margin: 5px 1px;
         }
     }
-    #editMinValue {
-        -moz-appearance: textfield-multiline;
-        -webkit-appearance: textarea;
-        border: 1px solid gray;
-        font: medium -moz-fixed;
-        font: -webkit-small-control;
-        height: 28px;
-        overflow: auto;
-        padding: 2px;
-        resize: both;
-        width: 400px;
+    .editMinValue, .editMaxValue {
+        line-height: 2;
+        display: flex;
+        width: 34px;
+        line-height: 1;
+        border: none;
     }
 }
 
 .container {
-    // height: 100vh;
     display: flex;
-    // align-items: center;
-    // justify-content: center;
+    margin-top: 10px;
 }
 
 .slider {

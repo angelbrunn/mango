@@ -1,3 +1,11 @@
 .Header {
     display: flex;
+    &-Conteiner {
+        background-color: #252627;
+        box-shadow: 0px 5px 5px #686869;
+        color: white;
+        height: 90px;
+        width: 100%;
+        padding: 30px;
+    }
 }

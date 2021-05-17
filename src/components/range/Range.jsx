@@ -8,6 +8,14 @@ export const Range = ({ min, max, fixed }) => {
     const maxValRef = useRef(max);
     const range = useRef(null);
 
+    useEffect(() => {
+      // info - check if fixed or normal range
+        if (fixed) {
+        document.getElementById('ballMin').disabled = true;
+        document.getElementById('ballMax').disabled = true;
+        }
+    }, []);
+
     // Convert to percentage
     const getPercent = useCallback(
         value => Math.round(((value - min) / (max - min)) * 100),
@@ -37,18 +45,28 @@ export const Range = ({ min, max, fixed }) => {
 
     return (
         <div className="rangeConteiner">
-            <div
-                className="minValue"
-                id="editMinValue"
-                contentEditable
-                // onClick={event => console.log(event.target)}
-            >
-                {minVal}
+            <div className="minValue">
+                <input
+                    type="text"
+                    className="editMinValue"
+                    min={min}
+                    max={max}
+                    value={minVal}
+                    onChange={event => {
+                        const value = Math.min(
+                            Number(event.target.value),
+                            maxVal - 1
+                        );
+                        setMinVal(value);
+                        minValRef.current = value;
+                    }}
+                />
                 <div className="amount">€</div>
             </div>
             <div className="container">
                 <input
                     type="range"
+                    id="ballMin"
                     min={min}
                     max={max}
                     value={minVal}
@@ -65,6 +83,7 @@ export const Range = ({ min, max, fixed }) => {
                 />
                 <input
                     type="range"
+                    id="ballMax"
                     min={min}
                     max={max}
                     value={maxVal}
@@ -82,12 +101,24 @@ export const Range = ({ min, max, fixed }) => {
                 <div className="slider">
                     <div className="slider__track" />
                     <div ref={range} className="slider__range" />
-                    {/* <div className="slider__left-value minVal">{minVal}</div> */}
-                    {/* <div className="slider__right-value maxVal">{maxVal}</div> */}
                 </div>
             </div>
             <div className="maxValue">
-                {maxVal}
+                <input
+                    type="text"
+                    className="editMaxValue"
+                    min={min}
+                    max={max}
+                    value={maxVal}
+                    onChange={event => {
+                        const value = Math.min(
+                            Number(event.target.value),
+                            maxVal - 1
+                        );
+                        setMaxVal(value);
+                        maxValRef.current = value;
+                    }}
+                />
                 <div className="amount">€</div>
             </div>
         </div>

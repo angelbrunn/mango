@@ -1,0 +1,19 @@
+.Fixed {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5%;
+    .Msg {
+        display: flex;
+        flex-direction: column;
+        .MsgType {
+            display: flex;
+            justify-content: center;
+        }
+        .MsgDesc {
+            display: flex;
+            justify-content: center;
+            margin: 5px;
+        }
+    }
+}
