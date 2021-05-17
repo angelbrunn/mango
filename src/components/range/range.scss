@@ -1,3 +1,118 @@
-.container {
+.rangeConteiner {
     display: flex;
+    justify-content: center;
+    line-height: 0.5;
+    .minValue {
+        display: flex;
+        margin: 0px 5px;
+        .amount {
+            margin: 0px 5px;
+        }
+    }
+    .maxValue {
+        display: flex;
+        margin: 0px 5px;
+        .amount {
+            margin: 0px 5px;
+        }
+    }
+    #editMinValue {
+        -moz-appearance: textfield-multiline;
+        -webkit-appearance: textarea;
+        border: 1px solid gray;
+        font: medium -moz-fixed;
+        font: -webkit-small-control;
+        height: 28px;
+        overflow: auto;
+        padding: 2px;
+        resize: both;
+        width: 400px;
+    }
+}
+
+.container {
+    // height: 100vh;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+
+.slider {
+    position: relative;
+    width: 200px;
+}
+
+.slider__track,
+.slider__range,
+.slider__left-value,
+.slider__right-value {
+    position: absolute;
+}
+
+.slider__track,
+.slider__range {
+    border-radius: 3px;
+    height: 5px;
+}
+
+.slider__track {
+    background-color: #000;
+    width: 100%;
+    z-index: 1;
+}
+
+.slider__range {
+    background-color: #000;
+    z-index: 2;
+}
+
+.slider__left-value,
+.slider__right-value {
+    color: #000;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.slider__left-value {
+    left: 6px;
+}
+
+.slider__right-value {
+    right: -4px;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+.thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 200px;
+    outline: none;
+}
+
+/* Left and right thumbs */
+.thumb::-webkit-slider-thumb {
+    background-color: #000;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #000;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+}
+
+.thumb--left::-webkit-slider-thumb {
+    z-index: 3;
+}
+
+.thumb--right::-webkit-slider-thumb {
+    z-index: 4;
 }
