@@ -169,3 +169,50 @@
     height: 20px;
     z-index: 5;
 }
+
+//
+
+.example_path_2 {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    overflow: hidden;
+    width: 500px;
+    height: 7px;
+    background-color: #000;
+    z-index: 1;
+}
+
+.example_block_2 {
+    position: absolute;
+    top: 39%;
+    left: 10%;
+    z-index: 2;
+    height: 25px;
+    width: 25px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.touch_2 {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    overflow: hidden;
+    width: 500px;
+    height: 20px;
+    background: none;
+    z-index: 4;
+}
+
+.overlay_2 {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    overflow: hidden;
+    width: 500px;
+    height: 20px;
+    z-index: 5;
+}
